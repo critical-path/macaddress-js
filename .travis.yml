@@ -1,0 +1,27 @@
+# repo branches
+
+branches:
+  only:
+  - master
+
+# job environment
+
+sudo: false
+
+language: node_js
+
+node_js:
+  - "lts/*"
+  - "node"
+
+# job phases
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+after_success:
+  - npm install --global coveralls
+  - cat ./coverage/lcov.info | coveralls
