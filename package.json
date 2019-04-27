@@ -1,0 +1,31 @@
+{
+  "name": "macaddress",
+  "version": "0.1.0",
+  "main": "index.js",
+  "description": "The macaddress library makes it easy to work with media access control (MAC) addresses.",
+  "keywords": [
+    "node",
+    "media-access-control",
+    "mac",
+    "mac-address"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": [],
+  "devDependencies": [
+    "chai",
+    "eslint",
+    "istanbul",
+    "mocha"
+  ],
+  "scripts": {
+    "test": "eslint *.js ; istanbul cover _mocha ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/critical-path/macaddress-js.git"
+  },
+  "license": "MIT"
+}
