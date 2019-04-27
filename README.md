@@ -47,7 +47,7 @@ undefined
 > var mac = new MediaAccessControlAddress("a0-b1-c2-d3-e4-f5")
 undefined
 > console.log(mac)
-MediaAccessControlAddress { original: 'a0b1c2d3e4f5' }
+MediaAccessControlAddress { original: 'a0-b1-c2-d3-e4-f5' }
 undefined
 ```
 
@@ -55,7 +55,7 @@ undefined
 > var mac = new MediaAccessControlAddress("a0:b1:c2:d3:e4:f5")
 undefined
 > console.log(mac)
-MediaAccessControlAddress { original: 'a0b1c2d3e4f5' }
+MediaAccessControlAddress { original: 'a0:b1:c2:d3:e4:f5' }
 undefined
 ```
 
@@ -63,7 +63,7 @@ undefined
 > var mac = new MediaAccessControlAddress("a0b1.c2d3.e4f5")
 undefined
 > console.log(mac)
-MediaAccessControlAddress { original: 'a0b1c2d3e4f5' }
+MediaAccessControlAddress { original: 'a0b1.c2d3.e4f5' }
 undefined
 ```
 
