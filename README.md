@@ -22,7 +22,7 @@ Clone or download this repository.
 Run `npm` with the `install` command.
 
 ```bash
-npm install
+$ npm install
 ```
 
 
@@ -202,7 +202,7 @@ undefined
 Run `npm` with the `test` command.
 
 ```bash
-npm test
+$ npm test
 ```
 
 
