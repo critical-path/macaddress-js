@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/critical-path/macaddress-js.svg?branch=master)](https://travis-ci.com/critical-path/macaddress-js) [![Coverage Status](https://coveralls.io/repos/github/critical-path/macaddress-js/badge.svg?branch=master)](https://coveralls.io/github/critical-path/macaddress-js?branch=master)
 
-## macaddress v0.1.0
+## macaddress v0.2.0
 
 The macaddress library makes it easy to work with media access control (MAC) addresses.
 
