@@ -1,32 +1,26 @@
 [![Build Status](https://travis-ci.com/critical-path/macaddress-js.svg?branch=master)](https://travis-ci.com/critical-path/macaddress-js) [![Coverage Status](https://coveralls.io/repos/github/critical-path/macaddress-js/badge.svg?branch=master)](https://coveralls.io/github/critical-path/macaddress-js?branch=master)
 
-## macaddress v0.2.0
+## Introduction
 
-The macaddress library makes it easy to work with media access control (MAC) addresses.
+Media access control (MAC) addresses play an important role in local-area networks.  They also pack a lot of information into 48-bit hexadecimal strings!
 
-
-## Dependencies
-
-macaddress requires Node and the npm package.  It also requires the following packages for testing.
-
-- chai
-- eslint
-- istanbul
-- mocha
+The macaddress library makes it easy to evaluate the properties of MAC addresses and the [extended identifiers](https://standards.ieee.org/products-services/regauth/tut/index.html) of which they are subclasses.
 
 
-## Installing macaddress with test cases and testing dependencies
+## Installing macaddress
 
-Clone or download this repository.
+macaddress is available on GitHub at https://github.com/critical-path/macaddress-js.
 
-Run `npm` with the `install` command.
+To install macaddress, run the following command from your shell.
 
 ```bash
-$ npm install
+[user@host ~]$ npm install git+https://github.com/critical-path/macaddress-js.git
 ```
 
 
 ## Using macaddress
+
+While macaddress contains multiple classes, the only one with which you need to interact directly is `MediaAccessControlAddress`.
 
 Require `MediaAccessControlAddress`.
 
@@ -35,41 +29,29 @@ Require `MediaAccessControlAddress`.
 undefined
 ```
 
-Instantiate `MediaAccessControlAddress` with a MAC address in plain, hyphen, colon, or dot notation.
+Instantiate `MediaAccessControlAddress` by passing in a MAC address in plain, hyphen, colon, or dot notation.
 
 ```node
 > var mac = new MediaAccessControlAddress("a0b1c2d3e4f5")
-undefined
-> console.log(mac)
-MediaAccessControlAddress { original: 'a0b1c2d3e4f5' }
 undefined
 ```
 
 ```node
 > var mac = new MediaAccessControlAddress("a0-b1-c2-d3-e4-f5")
 undefined
-> console.log(mac)
-MediaAccessControlAddress { original: 'a0-b1-c2-d3-e4-f5' }
-undefined
 ```
 
 ```node
 > var mac = new MediaAccessControlAddress("a0:b1:c2:d3:e4:f5")
-undefined
-> console.log(mac)
-MediaAccessControlAddress { original: 'a0:b1:c2:d3:e4:f5' }
 undefined
 ```
 
 ```node
 > var mac = new MediaAccessControlAddress("a0b1.c2d3.e4f5")
 undefined
-> console.log(mac)
-MediaAccessControlAddress { original: 'a0b1.c2d3.e4f5' }
-undefined
 ```
 
-To determine whether the MAC address is a broadcast, multicast (layer-two), or unicast, access its `isBroadcast`, `isMulticast`, and `isUnicast` properties.
+To determine whether the MAC address is a broadcast, a multicast (layer-two), or a unicast address, access its `isBroadcast`, `isMulticast`, and `isUnicast` properties.
 
 ```node
 > console.log(mac.isBroadcast)
@@ -103,7 +85,7 @@ false
 undefined
 ```
 
-To work with the MAC address's octets, access its `octets` property.  It contains one `Octet` object for each of the address's six octets.
+To work with the MAC address's octets, access its `octets` property, which contains six `Octet` objects.
 
 ```node
 > console.log(mac.octets)
@@ -197,15 +179,13 @@ undefined
 ```
 
 
-## Testing macaddress after installation
+## Testing macaddress
 
-Run `npm` with the `test` command.
+To conduct static and dynamic (unit) tests, run the following commands from your shell.
 
 ```bash
-$ npm test
+[user@host ~]$ cd node_modules
+[user@host node_modules]$ cd macaddress
+[user@host macaddress]$ npm install
+[user@host macaddress]$ npm test
 ```
-
-
-## A note on OUIs, CIDs, UAAs, and LAAs
-
-It appears that all OUIs are UAAs, all UAAs are OUIs, all CIDs are LAAs, but not all LAAs are CIDs.
