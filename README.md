@@ -13,7 +13,7 @@ macaddress is available on GitHub at https://github.com/critical-path/macaddress
 
 To install macaddress, run the following command from your shell.
 
-```bash
+```console
 [user@host ~]$ npm install git+https://github.com/critical-path/macaddress-js.git
 ```
 
@@ -183,7 +183,7 @@ undefined
 
 To conduct static and dynamic (unit) tests, run the following commands from your shell.
 
-```bash
+```console
 [user@host ~]$ cd node_modules
 [user@host node_modules]$ cd macaddress
 [user@host macaddress]$ npm install
