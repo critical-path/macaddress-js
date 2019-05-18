@@ -181,7 +181,7 @@ undefined
 
 ## Testing macaddress
 
-To conduct static and dynamic (unit) tests, run the following commands from your shell.
+To conduct testing, run the following commands from your shell.
 
 ```console
 [user@host ~]$ cd node_modules
