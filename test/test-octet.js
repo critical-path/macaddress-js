@@ -23,23 +23,27 @@ var valid = [
     {
         "digits": "A0",
         "normalized": "a0",
+        "decimal": 160,
         "binary": "10100000",
         "reverseBinary": "00000101"
     },
     {
         "digits": "a0",
         "normalized": "a0",
+        "decimal": 160,
         "binary": "10100000",
         "reverseBinary": "00000101"
     },
     {
         "digits": "B1",
         "normalized": "b1",
+        "decimal": 177,
         "binary": "10110001",
         "reverseBinary": "10001101"
     },
     {
         "digits": "b1",
+        "decimal": 177,
         "normalized": "b1",
         "binary": "10110001",
         "reverseBinary": "10001101"
@@ -47,48 +51,56 @@ var valid = [
     {
         "digits": "C2",
         "normalized": "c2",
+        "decimal": 194,
         "binary": "11000010",
         "reverseBinary": "01000011"
     },
     {
         "digits": "c2",
         "normalized": "c2",
+        "decimal": 194,
         "binary": "11000010",
         "reverseBinary": "01000011"
     },
     {
         "digits": "D3",
         "normalized": "d3",
+        "decimal": 211,
         "binary": "11010011",
         "reverseBinary": "11001011"
     },
     {
         "digits": "d3",
         "normalized": "d3",
+        "decimal": 211,
         "binary": "11010011",
         "reverseBinary": "11001011"
     },
     {
         "digits": "E4",
         "normalized": "e4",
+        "decimal": 228,
         "binary": "11100100",
         "reverseBinary": "00100111"
     },
     {
         "digits": "e4",
         "normalized": "e4",
+        "decimal": 228,
         "binary": "11100100",
         "reverseBinary": "00100111"
     },
     {
         "digits": "F5",
         "normalized": "f5",
+        "decimal": 245,
         "binary": "11110101",
         "reverseBinary": "10101111"
     },
     {
         "digits": "f5",
         "normalized": "f5",
+        "decimal": 245,
         "binary": "11110101",
         "reverseBinary": "10101111"
     }
@@ -113,6 +125,12 @@ valid.forEach(function(argument) {
         describe(".isValid", function() {
             it("should equal true", function() {
                 chai.assert.isTrue(octet.isValid)
+            })
+        })
+
+        describe(".decimal", function() {
+            it(`should equal ${argument.decimal}`, function() {
+                chai.assert.equal(octet.decimal, argument.decimal)
             })
         })
 

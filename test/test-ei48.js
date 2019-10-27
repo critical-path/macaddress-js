@@ -33,6 +33,7 @@ var eui = [
     { 
         digits: "a0b1c2d3e4f5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -45,6 +46,7 @@ var eui = [
     { 
         digits: "A0B1C2D3E4F5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -57,6 +59,7 @@ var eui = [
     { 
         digits: "a0-b1-c2-d3-e4-f5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -69,6 +72,7 @@ var eui = [
     { 
         digits: "A0-B1-C2-D3-E4-F5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -81,6 +85,7 @@ var eui = [
     { 
         digits: "a0:b1:c2:d3:e4:f5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -93,6 +98,7 @@ var eui = [
     { 
         digits: "A0:B1:C2:D3:E4:F5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -105,6 +111,7 @@ var eui = [
     { 
         digits: "a0b1.c2d3.e4f5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -117,6 +124,7 @@ var eui = [
     { 
         digits: "A0B1.C2D3.E4F5",
         normalized: "a0b1c2d3e4f5",
+        decimal: 176685338322165,
         binary: "101000001011000111000010110100111110010011110101",
         reverseBinary: "000001011000110101000011110010110010011110101111",
         fragments24: [ "a0b1c2", "d3e4f5" ],
@@ -159,6 +167,12 @@ eui.forEach(function(argument) {
         describe(".firstOctet", function() {
             it("should be an instance of Octet", function() {
                 chai.assert.isTrue(ei48.firstOctet instanceof Octet)
+            })
+        })
+
+        describe(".decimal", function() {
+            it(`should equal ${argument.decimal}`, function() {
+                chai.assert.equal(ei48.decimal, argument.decimal)
             })
         })
 
@@ -236,6 +250,7 @@ var eli = [
     { 
         digits: "0a1b2c3d4e5f",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -248,6 +263,7 @@ var eli = [
     { 
         digits: "0A1B2C3D4E5F",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -260,6 +276,7 @@ var eli = [
     { 
         digits: "0a-1b-2c-3d-4e-5f",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -272,6 +289,7 @@ var eli = [
     { 
         digits: "0A-1B-2C-3D-4E-5F",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -284,6 +302,7 @@ var eli = [
     { 
         digits: "0a:1b:2c:3d:4e:5f",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -296,6 +315,7 @@ var eli = [
     { 
         digits: "0A:1B:2C:3D:4E:5F",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -308,6 +328,7 @@ var eli = [
     { 
         digits: "0a1b.2c3d.4e5f",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -320,6 +341,7 @@ var eli = [
     { 
         digits: "0A1B.2C3D.4E5F",
         normalized: "0a1b2c3d4e5f",
+        decimal: 11111822610015,
         binary: "000010100001101100101100001111010100111001011111",
         reverseBinary: "010100001101100000110100101111000111001011111010",
         fragments24: [ "0a1b2c", "3d4e5f" ],
@@ -362,6 +384,12 @@ eli.forEach(function(argument) {
         describe(".firstOctet", function() {
             it("should be an instance of Octet", function() {
                 chai.assert.isTrue(ei48.firstOctet instanceof Octet)
+            })
+        })
+
+        describe(".decimal", function() {
+            it(`should equal ${argument.decimal}`, function() {
+                chai.assert.equal(ei48.decimal, argument.decimal)
             })
         })
 
@@ -439,6 +467,7 @@ var nullEUI = [
     { 
         digits: "ffffffffffff",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -451,6 +480,7 @@ var nullEUI = [
     { 
         digits: "FFFFFFFFFFFF",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -463,6 +493,7 @@ var nullEUI = [
     { 
         digits: "ff-ff-ff-ff-ff-ff",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -475,6 +506,7 @@ var nullEUI = [
     { 
         digits: "FF-FF-FF-FF-FF-FF",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -487,6 +519,7 @@ var nullEUI = [
     { 
         digits: "ff:ff:ff:ff:ff:ff",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -499,6 +532,7 @@ var nullEUI = [
     { 
         digits: "FF:FF:FF:FF:FF:FF",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -511,6 +545,7 @@ var nullEUI = [
     { 
         digits: "ffff.ffff.ffff",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -523,6 +558,7 @@ var nullEUI = [
     { 
         digits: "FFFF.FFFF.FFFF",
         normalized: "ffffffffffff",
+        decimal: 281474976710655,
         binary: "111111111111111111111111111111111111111111111111",
         reverseBinary: "111111111111111111111111111111111111111111111111",
         fragments24: [ "ffffff", "ffffff" ],
@@ -565,6 +601,12 @@ nullEUI.forEach(function(argument) {
         describe(".firstOctet", function() {
             it("should be an instance of Octet", function() {
                 chai.assert.isTrue(ei48.firstOctet instanceof Octet)
+            })
+        })
+
+        describe(".decimal", function() {
+            it(`should equal ${argument.decimal}`, function() {
+                chai.assert.equal(ei48.decimal, argument.decimal)
             })
         })
 

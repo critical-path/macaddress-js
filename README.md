@@ -120,6 +120,14 @@ false
 undefined
 ```
 
+To view the decimal equivalent of the MAC address, access its `decimal` property.
+
+```node
+> console.log(mac.binary)
+160
+undefined
+```
+
 To view the binary equivalent of the MAC address, access its `binary` and `reverseBinary` properties. With `binary`, the most-significant digit of each octet appears first.  With `reverseBinary`, the least-significant digit of each octet appears first.
 
 ```node
