@@ -115,7 +115,7 @@ To view the decimal equivalent of the MAC address, access its `decimal` property
 
 ```node
 > mac.decimal
-160
+176685338322165
 ```
 
 To view the binary equivalent of the MAC address, access its `binary` and `reverseBinary` properties. With `binary`, the most-significant digit of each octet appears first.  With `reverseBinary`, the least-significant digit of each octet appears first.
