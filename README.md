@@ -54,136 +54,109 @@ undefined
 To determine whether the MAC address is a broadcast, a multicast (layer-two), or a unicast address, access its `isBroadcast`, `isMulticast`, and `isUnicast` properties.
 
 ```node
-> console.log(mac.isBroadcast)
+> mac.isBroadcast
 false
-undefined
 ```
 
 ```node
-> console.log(mac.isMulticast)
+> mac.isMulticast
 false
-undefined
 ```
 
 ```node
-> console.log(mac.isUnicast)
+> mac.isUnicast
 true
-undefined
 ```
 
 To determine whether the MAC address is a universally-administered address (UAA) or a locally-administered address (LAA), access its `isUAA` and `isLAA` properties.
 
 ```node
-> console.log(mac.isUAA)
+> mac.isUAA
 true
-undefined
 ```
 
 ```node
-> console.log(mac.isLAA)
+> mac.isLAA
 false
-undefined
 ```
 
 To work with the MAC address's octets, access its `octets` property, which contains six `Octet` objects.
 
 ```node
-> console.log(mac.octets)
+> mac.octets
 [ Octet { original: 'a0' },
   Octet { original: 'b1' },
   Octet { original: 'c2' },
   Octet { original: 'd3' },
   Octet { original: 'e4' },
   Octet { original: 'f5' } ]
-undefined
 ```
 
 To determine whether the MAC address is an extended unique identifier (EUI), an extended local identifier (ELI), or unknown, access its `type` property.
 
 ```node
-> console.log(mac.type)
-unique
-undefined
+> mac.type
+`unique`
 ```
 
 To determine whether the MAC address has an organizationally-unique identifier (OUI) or a company ID (CID), access its `hasOUI` and `hasCID` properties.
 
 ```node
-> console.log(mac.hasOUI)
+> mac.hasOUI
 true
-undefined
 ```
 
 ```node
-> console.log(mac.hasCID)
+> mac.hasCID
 false
-undefined
 ```
 
 To view the decimal equivalent of the MAC address, access its `decimal` property.
 
 ```node
-> console.log(mac.binary)
+> mac.decimal
 160
-undefined
 ```
 
 To view the binary equivalent of the MAC address, access its `binary` and `reverseBinary` properties. With `binary`, the most-significant digit of each octet appears first.  With `reverseBinary`, the least-significant digit of each octet appears first.
 
 ```node
-> console.log(mac.binary)
-101000001011000111000010110100111110010011110101
-undefined
+> mac.binary
+`101000001011000111000010110100111110010011110101`
 ```
 
 ```node
-> console.log(mac.reverseBinary)
-000001011000110101000011110010110010011110101111
-undefined
+> mac.reverseBinary
+`000001011000110101000011110010110010011110101111`
 ```
 
 To return the MAC address's two "fragments," call the `toFragments` method.  For an EUI, this means the 24-bit OUI as the first fragment and the remaining interface-specific bits as the second fragment.  For an ELI, this means the 24-bit CID as the first fragment and the remaining interface-specific bits as the second fragment.
 
 ```node
-> var fragments = mac.toFragments()
-undefined
-> console.log(fragments)
+> mac.toFragments()
 [ 'a0b1c2', 'd3e4f5' ]
-undefined
 ```
 
 To return the MAC address in different notations, call the `toPlainNotation`, `toHyphenNotation`, `toColonNotation`, and `toDotNotation` methods.
 
 ```node
-> var plain = mac.toPlainNotation()
-undefined
-> console.log(plain)
-a0b1c2d3e4f5
-undefined
+> mac.toPlainNotation()
+`a0b1c2d3e4f5`
 ```
 
 ```node
-> var hyphen = mac.toHyphenNotation()
-undefined
-> console.log(hyphen)
-a0-b1-c2-d3-e4-f5
-undefined
+> mac.toHyphenNotation()
+`a0-b1-c2-d3-e4-f5`
 ```
 
 ```node
-> var colon = mac.toColonNotation()
-undefined
-> console.log(colon)
-a0:b1:c2:d3:e4:f5
-undefined
+> mac.toColonNotation()
+`a0:b1:c2:d3:e4:f5`
 ```
 
 ```node
-> var dot = mac.toDotNotation()
-undefined
-> console.log(dot)
-a0b1.c2d3.e4f5
-undefined
+> mac.toDotNotation()
+`a0b1.c2d3.e4f5`
 ```
 
 
