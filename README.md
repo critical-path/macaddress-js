@@ -96,7 +96,7 @@ To determine whether the MAC address is an extended unique identifier (EUI), an 
 
 ```node
 > mac.type
-`unique`
+'unique'
 ```
 
 To determine whether the MAC address has an organizationally-unique identifier (OUI) or a company ID (CID), access its `hasOUI` and `hasCID` properties.
@@ -122,12 +122,12 @@ To view the binary equivalent of the MAC address, access its `binary` and `rever
 
 ```node
 > mac.binary
-`101000001011000111000010110100111110010011110101`
+'101000001011000111000010110100111110010011110101'
 ```
 
 ```node
 > mac.reverseBinary
-`000001011000110101000011110010110010011110101111`
+'000001011000110101000011110010110010011110101111'
 ```
 
 To return the MAC address's two "fragments," call the `toFragments` method.  For an EUI, this means the 24-bit OUI as the first fragment and the remaining interface-specific bits as the second fragment.  For an ELI, this means the 24-bit CID as the first fragment and the remaining interface-specific bits as the second fragment.
@@ -141,22 +141,22 @@ To return the MAC address in different notations, call the `toPlainNotation`, `t
 
 ```node
 > mac.toPlainNotation()
-`a0b1c2d3e4f5`
+'a0b1c2d3e4f5'
 ```
 
 ```node
 > mac.toHyphenNotation()
-`a0-b1-c2-d3-e4-f5`
+'a0-b1-c2-d3-e4-f5'
 ```
 
 ```node
 > mac.toColonNotation()
-`a0:b1:c2:d3:e4:f5`
+'a0:b1:c2:d3:e4:f5'
 ```
 
 ```node
 > mac.toDotNotation()
-`a0b1.c2d3.e4f5`
+'a0b1.c2d3.e4f5'
 ```
 
 
